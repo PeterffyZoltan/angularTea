@@ -1,0 +1,49 @@
+{
+  "teas": [
+    {
+      "id": "1",
+      "name": "Green Tea",
+      "origin": "China, Japan",
+      "flavor": "Fresh, grassy",
+      "caffeine": "Moderate",
+      "price_per_ounce": 2.5,
+      "image": "https://healthjade.com/wp-content/uploads/2017/02/green-tea.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Black Tea",
+      "origin": "India, Sri Lanka",
+      "flavor": "Bold, malty",
+      "caffeine": "High",
+      "price_per_ounce": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Cup_of_black_tea.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Oolong Tea",
+      "origin": "Taiwan, China",
+      "flavor": "Floral, creamy",
+      "caffeine": "Moderate",
+      "price_per_ounce": 4,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Loose_oolong_tea_leaves.jpg"
+    },
+    {
+      "id": "4",
+      "name": "White Tea",
+      "origin": "China",
+      "flavor": "Light, delicate",
+      "caffeine": "Low",
+      "price_per_ounce": 5,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/Silver_needle_white_tea.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Herbal Tea",
+      "origin": "Various",
+      "flavor": "Varies (minty, floral)",
+      "caffeine": "None",
+      "price_per_ounce": 2,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Cup_of_herbal_tea.jpg"
+    }
+  ]
+}

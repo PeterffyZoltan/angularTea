@@ -1,0 +1,86 @@
+<!-- Modal to Edit Tea Data -->
+@if (selectedTea) {
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Tea Details</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="cancel()"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Tea Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  [value]="selectedTea.name"
+                  (change)="selectedTea.name = getvalue($event)"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="origin" class="form-label">Origin:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="origin"
+                  [value]="selectedTea.origin"
+                  (change)="selectedTea.origin = getvalue($event)"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="flavor" class="form-label">Flavor:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="flavor"
+                  [value]="selectedTea.flavor"
+                  (change)="selectedTea.flavor = getvalue($event)"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="caffeine" class="form-label">Caffeine Content:</label>
+                <select
+                  class="form-select"
+                  id="caffeine"
+                  [value]="selectedTea.caffeine"
+                  (change)="selectedTea.caffeine = getvalue($event)"
+                >
+                  <option value="Low">Low</option>
+                  <option value="Moderate">Moderate</option>
+                  <option value="High">High</option>
+                  <option value="None">None</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Price per Ounce:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="price"
+                  [value]="selectedTea.price_per_ounce"
+                  (change)="selectedTea.price_per_ounce = +getvalue($event)"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="image" class="form-label">Image URL:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="image"
+                  [value]="selectedTea.image"
+                  (change)="selectedTea.image = getvalue($event)"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="cancel()">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="saveTea()">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  
