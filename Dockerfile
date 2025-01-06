@@ -4,4 +4,4 @@ COPY . .
 RUN npm install
 RUN npm run build
 FROM httpd:2.4
-COPY --from=node /app/dist/angularTea/browser /usr/local/apache2/htdocs
+COPY --from=node /app/dist/angular-tea/browser /usr/local/apache2/htdocs
