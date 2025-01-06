@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - name: Set Image Tag
+        run: |
+          echo "IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: |
+          docker build . --file Dockerfile --tag ghcr.io/peterffyzoltan/angulartea:$IMAGE_TAG --tag ghcr.io/peterffyzoltan/angulartea:latest
+          docker login ghcr.io -u peterffyzoltan -p ${{secrets.GHCR_TOKEN}}
+          docker push ghcr.io/peterffyzoltan/angulartea:$IMAGE_TAG
+          docker push ghcr.io/peterffyzoltan/angulartea:latest
