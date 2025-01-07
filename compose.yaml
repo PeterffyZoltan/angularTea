@@ -4,7 +4,7 @@ services:
     ports:
       - "8000:80"
     depends_on:
-      - "back-end"
+      - "json-server"
   json-server:
     build: ./data
     ports:
